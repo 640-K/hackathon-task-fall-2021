@@ -44,5 +44,6 @@ public class ActionState : StateMachineBehaviour
     override public void OnStateMachineExit(Animator animator, int stateMachinePathHash)
     {
         animator.SetInteger("action", 0);
+        animator.SetTrigger("noActionsInProgress");
     }
 }
