@@ -481,6 +481,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 734323126413796325, guid: 7494588e647b6d646b36057d5e213469, type: 3}
+      propertyPath: m_Size.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 734323126413796325, guid: 7494588e647b6d646b36057d5e213469, type: 3}
+      propertyPath: m_Size.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 734323126413796325, guid: 7494588e647b6d646b36057d5e213469, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6340976988778956856, guid: a9a8058cdb32f9542a7ad244d60b9fe6, type: 3}
+    - target: {fileID: 734323126413796325, guid: 7494588e647b6d646b36057d5e213469, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1309413123915804397, guid: 7494588e647b6d646b36057d5e213469, type: 3}
       propertyPath: m_Name
       value: Deda1
