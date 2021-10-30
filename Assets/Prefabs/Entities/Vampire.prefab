@@ -144,6 +144,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vampire
       objectReference: {fileID: 0}
+    - target: {fileID: 2580143609405048254, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 3923446906190443154, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
       propertyPath: m_Controller
       value: 
@@ -182,11 +186,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4749230587034931398, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 15.869041
       objectReference: {fileID: 0}
     - target: {fileID: 4749230587034931398, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -14.344004
       objectReference: {fileID: 0}
     - target: {fileID: 4749230587034931398, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
       propertyPath: m_LocalPosition.z

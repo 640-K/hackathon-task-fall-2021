@@ -20,7 +20,6 @@ namespace AI
         {
             PathNode startNode = grid.GetPathNode(startX, startY);
             PathNode endNode = grid.GetPathNode(endX, endY);
-
             openList = new List<PathNode> { startNode };
             closedList = new List<PathNode>();
 
@@ -34,11 +33,9 @@ namespace AI
                     pathNode.cameFromNode = null;
                 }
             }
-
             startNode.gCost = 0;
             startNode.hCost = CalculateDistaceCost(startNode, endNode);
             startNode.CalculateFCost();
-
             while(openList.Count > 0)
             {
                 PathNode currentNode = GetLowestCostNode(openList);
@@ -46,13 +43,10 @@ namespace AI
                 {
                     return CalculatePath(endNode);
                 }
-
                 openList.Remove(currentNode);
                 closedList.Add(currentNode);
-
                 foreach(PathNode neibourt in GetNeibourtList(currentNode)){
                     if (closedList.Contains(neibourt)) continue;
-
                     int gCost = currentNode.gCost + CalculateDistaceCost(currentNode, neibourt);
                     if (gCost < neibourt.gCost)
                     {
@@ -75,9 +69,7 @@ namespace AI
         private List<PathNode> GetNeibourtList(PathNode currentNode)
         {
             List<PathNode> neibourtList = new List<PathNode>();
-            try
-            {
-                if (currentNode.x -1 >= 0)
+             if (currentNode.x -1 >= 0)
                 {
 
                     if (grid.GetPathNode(currentNode.x - 1, currentNode.y).isWalkable) neibourtList.Add(grid.GetPathNode(currentNode.x - 1, currentNode.y));
@@ -96,12 +88,7 @@ namespace AI
 
                 if (currentNode.y - 1 >= 0 && grid.GetPathNode(currentNode.x, currentNode.y - 1).isWalkable) neibourtList.Add(grid.GetPathNode(currentNode.x, currentNode.y - 1));
                 if (currentNode.y + 1 <= grid.height && grid.GetPathNode(currentNode.x, currentNode.y + 1).isWalkable) neibourtList.Add(grid.GetPathNode(currentNode.x, currentNode.y + 1));
-                }
-            catch (System.Exception)
-            {
-
-            }
-
+                
             return neibourtList;
         }
 
