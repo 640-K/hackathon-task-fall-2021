@@ -121,7 +121,7 @@ namespace Entities
 
         public uint Hurt(uint damage)
         {
-            if (dead && damage == 0) return 0;
+            if (dead || damage == 0) return 0;
 
             uint damageDealt = Math.Min(damage, currentHealth);
             currentHealth -= damageDealt;
