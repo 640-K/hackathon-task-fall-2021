@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entities;
 
-public class EntityController : MonoBehaviour
+public abstract class EntityController : MonoBehaviour
 {
     public Entity controlledEntity;
+
+    protected abstract void Update();
 }

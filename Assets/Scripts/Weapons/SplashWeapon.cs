@@ -5,13 +5,14 @@ using Entities;
 
 namespace Weapons
 {
-    public class BladeWeapon : Weapon
+    public class SplashWeapon : Weapon
     {
-        protected List<Entity> entitiesInRange;
+        public IReadOnlyList<Entity> entitiesInRange => _entitiesInRange;
+        private List<Entity> _entitiesInRange;
 
         private void Awake()
         {
-            entitiesInRange = new List<Entity>();
+            _entitiesInRange = new List<Entity>();
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -19,7 +20,7 @@ namespace Weapons
             var entity = collision.GetComponent<Entity>();
 
             if (entity != null && entity != owner)
-                entitiesInRange.Add(entity);
+                _entitiesInRange.Add(entity);
         }
 
         private void OnTriggerExit2D(Collider2D collision)
@@ -27,13 +28,13 @@ namespace Weapons
             var entity = collision.GetComponent<Entity>();
 
             if (entity != null && entity != owner)
-                entitiesInRange.Remove(entity);
+                _entitiesInRange.Remove(entity);
         }
 
         public override void Use()
         {
-            uint damageDealt = 0;
-            foreach (var entity in entitiesInRange)
+            damageDealt = 0;
+            foreach (var entity in _entitiesInRange)
             {
                 if (entity as Vampire == null)
                     damageDealt += entity.Hurt(damage);

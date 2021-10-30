@@ -141,12 +141,16 @@ namespace Entities
             return damageDealt;
         }
 
-        public void Heal(uint factor)
+        public uint Heal(uint factor)
         {
-            if (dead) return;
+            if (dead) return 0;
 
-            currentHealth = Math.Min(currentHealth + factor, health);
+            uint amount = Math.Min(factor, health - currentHealth);
+            currentHealth += amount;
+
             events.onHeal.Invoke();
+
+            return amount;
         }
 
         public void Kill() => Hurt(health);    

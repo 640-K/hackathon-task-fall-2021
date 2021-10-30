@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entities;
 
-public class VampireController : EntityController
+public class VampireController : PlayerController
 {
     Vampire controlledVampire;
     void Start()
@@ -15,8 +15,8 @@ public class VampireController : EntityController
             throw new ArgumentException("Controlled Entity is not a Vampire!");
     }
 
-    void Update()
-    {
+    protected override void Update()
+    { 
         if (controlledVampire == null) return;
 
         if (Input.GetButtonDown("Fire1"))
@@ -25,25 +25,6 @@ public class VampireController : EntityController
         if (Input.GetButtonDown("Fire2"))
             controlledVampire.Bite();
 
-        ApplyMotion();
+        base.ApplyMotion();
     }
-
-    protected void ApplyMotion()
-    {
-        if (controlledEntity == null) return;
-
-        Vector2 motion = Vector2.zero;
-
-        if (Input.GetKey(KeyCode.W))
-            motion += Vector2.up;
-        if (Input.GetKey(KeyCode.A))
-            motion -= Vector2.right;
-        if (Input.GetKey(KeyCode.S))
-            motion -= Vector2.up;
-        if (Input.GetKey(KeyCode.D))
-            motion += Vector2.right;
-
-        controlledEntity.Move(motion);
-    }
-
 }
