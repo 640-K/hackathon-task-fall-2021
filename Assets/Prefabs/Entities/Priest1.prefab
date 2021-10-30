@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6244863434676228524}
   - component: {fileID: 6630696190774227249}
+  - component: {fileID: 4323486429212402279}
   m_Layer: 7
   m_Name: Staff
   m_TagString: Untagged
@@ -25,11 +26,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5761950449786199501}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3404033, y: 0.17011428, z: -1.8518208}
+  m_LocalPosition: {x: 0.082, y: 0.032, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 9178397567814115387}
-  m_RootOrder: 2
+  m_Father: {fileID: 8168487194943524512}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6630696190774227249
 MonoBehaviour:
@@ -45,6 +46,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 857242233220756167}
   damage: 500
+  areaEffectDuration: 0
+  staffCooldown: 5
+  areaPrefab: {fileID: 0}
+--- !u!70 &4323486429212402279
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5761950449786199501}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.2, y: 0.2}
+  m_Direction: 1
 --- !u!1001 &4506027328047788285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -159,11 +179,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2580143609405048254, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
   m_PrefabInstance: {fileID: 4506027328047788285}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &9178397567814115387 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4749230587034931398, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
-  m_PrefabInstance: {fileID: 4506027328047788285}
-  m_PrefabAsset: {fileID: 0}
 --- !u!50 &1264959759464857649 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 3388560463962616012, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
@@ -172,6 +187,11 @@ Rigidbody2D:
 --- !u!1 &6740467964420553435 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7134383634526652966, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+  m_PrefabInstance: {fileID: 4506027328047788285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8168487194943524512 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5752455893842280029, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
   m_PrefabInstance: {fileID: 4506027328047788285}
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &646967861518762607 stripped

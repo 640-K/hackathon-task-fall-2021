@@ -9,5 +9,10 @@ namespace Entities
     {
         public StaffOfTheSaint staff;
 
+
+        public void UseStaff()
+        {
+            staff.Use();
+        }
     }
 }

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5822522866243177664}
   - component: {fileID: 1496763579881266066}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CollisionBounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 4749230587034931398}
   - component: {fileID: 4216763851076077525}
   - component: {fileID: 3388560463962616012}
+  - component: {fileID: 7498088305447200290}
   m_Layer: 6
   m_Name: Mob
   m_TagString: Untagged
@@ -118,6 +119,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &7498088305447200290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2580143609405048254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcc16cc189fe8d641b4616d7307d6da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heightPoint: {fileID: 5822522866243177664}
+  spriteRenderer: {fileID: 4311541622360164534}
+  minLayerOrder: 10
+  maxLayerOrder: 300
 --- !u!1 &7134383634526652966
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventToInvoke:
-    m_PersistentCalls:
+  - m_PersistentCalls:
       m_Calls: []
 --- !u!95 &3923446906190443154
 Animator:
