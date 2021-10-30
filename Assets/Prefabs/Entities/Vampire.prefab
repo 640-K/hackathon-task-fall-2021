@@ -1,5 +1,132 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &722339928348987217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5737731763532543309}
+  - component: {fileID: 3606327940506500111}
+  - component: {fileID: 6118787607564957474}
+  m_Layer: 7
+  m_Name: Knife
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5737731763532543309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722339928348987217}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6874513622281761072}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &3606327940506500111
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722339928348987217}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.025, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.075
+--- !u!114 &6118787607564957474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722339928348987217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e167baaee7a4734c9f90f420e55d94f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 172553375089251448}
+  damage: 80
+  aimDirection: {x: 0, y: 0}
+--- !u!1 &1962181037834278008
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5589444292403752864}
+  - component: {fileID: 539824419044146865}
+  - component: {fileID: 1016357642532833272}
+  m_Layer: 7
+  m_Name: Teeth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5589444292403752864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962181037834278008}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6874513622281761072}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &539824419044146865
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962181037834278008}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.02, y: 0.01}
+  serializedVersion: 2
+  m_Radius: 0.025
+--- !u!114 &1016357642532833272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1962181037834278008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a9eca11d398b884cb541485b0bb90fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 172553375089251448}
+  damage: 20
+  aimDirection: {x: 0, y: 0}
+  healingFactor: 0.35
 --- !u!1001 &2202125772608709110
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46,7 +173,7 @@ PrefabInstance:
     - target: {fileID: 4311541622360164534, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -831426100493663744, guid: d14ecbddde61d374da8fb4d3d8f33506, type: 3}
+      objectReference: {fileID: -2904457877120967500, guid: 8932fbe69755d2043a532a19562b877b, type: 3}
     - target: {fileID: 4311541622360164534, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -104,6 +231,11 @@ PrefabInstance:
 --- !u!1 &4413817116810421320 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2580143609405048254, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+  m_PrefabInstance: {fileID: 2202125772608709110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6874513622281761072 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4749230587034931398, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
   m_PrefabInstance: {fileID: 2202125772608709110}
   m_PrefabAsset: {fileID: 0}
 --- !u!50 &3569402256807661882 stripped
@@ -178,3 +310,5 @@ MonoBehaviour:
   physicsBody: {fileID: 3569402256807661882}
   collisionBounds: {fileID: 741430595267312228}
   avatarAnimator: {fileID: 2953630822579901284}
+  teeth: {fileID: 1016357642532833272}
+  knife: {fileID: 6118787607564957474}

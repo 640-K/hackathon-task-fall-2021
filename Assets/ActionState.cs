@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ActionState : StateMachineBehaviour
 {
+    public const string allowActionsTrigger = "allowActions";
+
     // OnStateEnter is called before OnStateEnter is called on any state inside this state machine
     //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
@@ -44,6 +46,6 @@ public class ActionState : StateMachineBehaviour
     override public void OnStateMachineExit(Animator animator, int stateMachinePathHash)
     {
         animator.SetInteger("action", 0);
-        animator.SetTrigger("actionsInProgress");
+        animator.SetTrigger(allowActionsTrigger);
     }
 }
