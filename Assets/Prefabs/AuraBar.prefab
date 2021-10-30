@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.36676785, y: 1.5414109}
-  m_SizeDelta: {x: -6.7084064, y: -25.507463}
+  m_AnchoredPosition: {x: -0.12000275, y: 1.8299999}
+  m_SizeDelta: {x: -5.0247, y: -25.4055}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6927585067107972517
 CanvasRenderer:
@@ -67,7 +67,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 742694783190739037, guid: 10bbbd7b204244735991bc27b99e2de0, type: 3}
   m_Type: 3
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
   m_FillAmount: 1
@@ -87,6 +87,7 @@ GameObject:
   - component: {fileID: 6927585068254630899}
   - component: {fileID: 6927585068254630898}
   - component: {fileID: 6927585068254630901}
+  - component: {fileID: 1012815843}
   m_Layer: 5
   m_Name: AuraBar
   m_TagString: Untagged
@@ -175,6 +176,20 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &1012815843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6927585068254630900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f17436463f7a449c280ecf5be4613ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  barFill: {fileID: 6927585067107972516}
+  changeRate: 0.5
 --- !u!1 &6927585068355494608
 GameObject:
   m_ObjectHideFlags: 0
