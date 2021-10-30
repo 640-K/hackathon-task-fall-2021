@@ -16,8 +16,6 @@ namespace UI {
 
         void Start()
         {
-            // slider = GetComponent<Slider>();
-
             entity.events.onHurt.AddListener(HealthChangedListener);
             entity.events.onHeal.AddListener(HealthChangedListener);
             entity.events.onDie.AddListener(HealthChangedListener);
