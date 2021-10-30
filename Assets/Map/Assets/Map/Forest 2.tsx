@@ -30,12 +30,12 @@
  </tile>
  <tile id="133">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="21.3636" y="0" width="10.6364" height="32"/>
+   <object id="1" x="21.3636" y="0" width="5.87298" height="32"/>
   </objectgroup>
  </tile>
  <tile id="135">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="10.9091" height="32"/>
+   <object id="1" x="5.44391" y="0" width="5.46519" height="32"/>
   </objectgroup>
  </tile>
  <tile id="136">
@@ -46,8 +46,8 @@
  </tile>
  <tile id="137">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="17.2727" y="0" width="9.81818" height="27.0909"/>
-   <object id="2" x="0" y="22.5455" width="27.6364" height="4.90909"/>
+   <object id="1" x="17.2727" y="0" width="7.77671" height="27.0909"/>
+   <object id="2" x="0" y="22.5455" width="25.1696" height="4.90909"/>
   </objectgroup>
  </tile>
  <tile id="152">
