@@ -7,6 +7,7 @@ namespace Weapons
 {
     public class StaffOfTheSaint : SplashWeapon
     {
+        public uint healing;
         public float areaEffectDuration;
         public float staffCooldown = 5f;
 
@@ -18,23 +19,21 @@ namespace Weapons
             foreach (var entity in entitiesInRange)
             {
                 if (entity as Vampire != null)
-                    entity.Hurt((uint)(damage * Aura.aura.auraLevel));
+                    entity.Hurt((uint)(damage * Aura.aura.strength));
                 else
-                    entity.Heal((uint)(damage * Aura.aura.auraLevel));
+                    entity.Heal((uint)(healing * Aura.aura.strength));
             }
         }
 
 
-        bool effectAvailable = true;
+        public bool effectAvailable { get; protected set; } = true;
 
-        public virtual bool ActivateArea()
+        public virtual void ActivateArea()
         {
-            if (!effectAvailable) return false;
+            if (!effectAvailable) return;
 
             StartCoroutine(StaffCooldown());
             StartCoroutine(StaffEffectArea());
-
-            return true;
 
 
             IEnumerator StaffCooldown()
@@ -48,10 +47,15 @@ namespace Weapons
             {
                 var area = Instantiate(areaPrefab);
                 area.transform.position = transform.position;
+                var settings = area.particles.main;
+                settings.duration = areaEffectDuration;
 
+                area.ActivateArea(owner,(uint)(damage * Aura.aura.strength / 2), (uint)(healing * Aura.aura.strength / 2));
+
+                area.particles.Play();
                 yield return new WaitForSeconds(areaEffectDuration);
 
-                Destroy(area);
+                Destroy(area.gameObject);
             }
         }
     }

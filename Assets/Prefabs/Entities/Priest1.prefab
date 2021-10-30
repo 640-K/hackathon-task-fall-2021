@@ -45,10 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 857242233220756167}
-  damage: 500
-  areaEffectDuration: 0
-  staffCooldown: 5
-  areaPrefab: {fileID: 0}
+  damage: 10
+  healing: 10
+  areaEffectDuration: 10
+  staffCooldown: 15
+  areaPrefab: {fileID: 4459755496874944008, guid: 5fa7a69cf3741bd4398b66d551ad1599, type: 3}
 --- !u!70 &4323486429212402279
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -59,7 +60,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -172,6 +173,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.data[0].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.data[1].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6630696190774227249}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 6630696190774227249}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Use
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivateArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Weapons.StaffOfTheSaint, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Weapons.StaffOfTheSaint, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9153302218189120693, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: eventToInvoke.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
 --- !u!1 &2109405405605573955 stripped
@@ -256,4 +317,4 @@ MonoBehaviour:
   physicsBody: {fileID: 1264959759464857649}
   collisionBounds: {fileID: 3048107300438748015}
   avatarAnimator: {fileID: 646967861518762607}
-  staff: {fileID: 0}
+  staff: {fileID: 6630696190774227249}

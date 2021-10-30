@@ -7,17 +7,18 @@ namespace Weapons
 {
     public class EffectArea : SplashWeapon
     {
+        public ParticleSystem particles;
+
         uint totalHealing = 0;
         uint healing = 0;
 
-        // Start is called before the first frame update
-        void ActivateArea(Entity owner, uint damage, uint healing)
+        public void ActivateArea(Entity owner, uint damage, uint healing)
         {
-            StartCoroutine(Damage());
-            
             this.damage = damage;
             this.healing = healing;
             this.owner = owner;
+
+            StartCoroutine(Damage());
         }
 
         IEnumerator Damage()
