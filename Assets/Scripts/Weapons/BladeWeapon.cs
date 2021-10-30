@@ -28,7 +28,7 @@ public class BladeWeapon : Weapon
             entitiesInRange.Remove(entity);
     }
 
-    public override uint Use()
+    public override void Use()
     {
         uint damageDealt = 0;
         foreach(var entity in entitiesInRange)
@@ -36,7 +36,5 @@ public class BladeWeapon : Weapon
             if(entity as Vampire == null)
                 damageDealt += entity.Hurt(damage);
         }
-
-        return damageDealt;
     }
 }

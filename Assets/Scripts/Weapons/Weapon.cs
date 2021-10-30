@@ -8,6 +8,9 @@ public abstract class Weapon : MonoBehaviour
     public Entity owner;
     public uint damage;
     public Vector2 aimDirection;
+    public uint damageDealt;
 
-    public abstract uint Use();
+
+    public abstract void Use();
+
 }
