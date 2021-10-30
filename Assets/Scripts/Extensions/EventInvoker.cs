@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EventInvoker : MonoBehaviour
 {
-    public UnityEvent eventToInvoke;
+    public List<UnityEvent> eventToInvoke;
 
-    void Invoke() => eventToInvoke.Invoke();
+    void Invoke(int index) => eventToInvoke[index].Invoke();
 }
