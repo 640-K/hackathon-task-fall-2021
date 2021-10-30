@@ -19,9 +19,9 @@ namespace UI {
             if (Input.GetKeyUp(KeyCode.Escape))
             {
                 if (Time.timeScale == 1)
-                    stopGame();
+                    StopGame();
                 else
-                    resumeGame();
+                    ResumeGame();
             }
         }
 
@@ -33,7 +33,7 @@ namespace UI {
             }
         }
 
-        public void stopGame()
+        public void StopGame()
         {
             Time.timeScale = 0;
             SetActiveChildren(true);
@@ -41,7 +41,7 @@ namespace UI {
             auraBarCanvas.SetActive(false);
         }
 
-        public void resumeGame()
+        public void ResumeGame()
         {
             Time.timeScale = 1;
             SetActiveChildren(false);
