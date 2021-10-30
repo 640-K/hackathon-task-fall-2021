@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entities;
 
-public abstract class Weapon : MonoBehaviour
+namespace Weapons
 {
-    public Entity owner;
-    public uint damage;
-    public Vector2 aimDirection;
-    public uint damageDealt;
+    public abstract class Weapon : MonoBehaviour
+    {
+        public Entity owner;
+        public uint damage;
 
 
-    public abstract void Use();
+        public uint damageDealt { get; protected set; }
 
+
+        public abstract void Use();
+    }
 }
