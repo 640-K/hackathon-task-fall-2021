@@ -249,17 +249,18 @@
  </tile>
  <tile id="181">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="32" height="32"/>
+   <object id="1" x="0" y="0" width="20.9421" height="32"/>
+   <object id="2" x="21.0952" y="0" width="10.9048" height="24.0893"/>
   </objectgroup>
  </tile>
  <tile id="182">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="32" height="32"/>
+   <object id="1" x="0" y="0" width="32" height="24.0043"/>
   </objectgroup>
  </tile>
  <tile id="183">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="15" height="32"/>
+   <object id="1" x="0" y="0" width="15" height="25.2802"/>
   </objectgroup>
  </tile>
  <tile id="184">
@@ -285,12 +286,14 @@
  <tile id="192">
   <objectgroup draworder="index" id="2">
    <object id="1" x="4" y="0" width="28" height="6.72727"/>
+   <object id="2" x="6.55183" y="10.0372" width="25.4482" height="21.9628"/>
   </objectgroup>
  </tile>
  <tile id="193">
   <objectgroup draworder="index" id="2">
    <object id="1" x="8.72727" y="0" width="23.2727" height="20.3636"/>
    <object id="2" x="0" y="0" width="32" height="7.45455"/>
+   <object id="3" x="0" y="10.1223" width="5.97129" height="21.8777"/>
   </objectgroup>
  </tile>
  <tile id="194">
@@ -305,22 +308,17 @@
  </tile>
  <tile id="196">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="13" y="0" width="19" height="30"/>
+   <object id="1" x="15.1265" y="0" width="16.8735" height="19.1972"/>
   </objectgroup>
  </tile>
  <tile id="197">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="32" height="20"/>
+   <object id="1" x="0" y="8.93142" width="32" height="10.0478"/>
   </objectgroup>
  </tile>
  <tile id="198">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="32" height="24"/>
-  </objectgroup>
- </tile>
- <tile id="199">
-  <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="15" height="20"/>
+   <object id="1" x="0" y="8.67624" width="25.2802" height="10.3902"/>
   </objectgroup>
  </tile>
  <tile id="200">
