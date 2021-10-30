@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 27cee15ca9b79e4429a3d646cbf26646
+=======
+guid: 866da0379243ff1469bef4a7376362da
+>>>>>>> b3d0c41... Updated map, added ladders
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
