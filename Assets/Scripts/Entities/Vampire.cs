@@ -10,32 +10,7 @@ namespace Entities
     {
         public VampireTeeth teeth;
         public BladeWeapon knife;
-        void Update()
-        {
-            if (Input.GetButtonDown("Fire1"))
-                KnifeAttack();
 
-            if (Input.GetButtonDown("Fire2"))
-                Bite();
-
-            ApplyMotion();
-        }
-
-        protected void ApplyMotion()
-        {
-            Vector2 motion = Vector2.zero;
-
-            if (Input.GetKey(KeyCode.W))
-                motion += Vector2.up;
-            if (Input.GetKey(KeyCode.A))
-                motion -= Vector2.right;
-            if (Input.GetKey(KeyCode.S))
-                motion -= Vector2.up;
-            if (Input.GetKey(KeyCode.D))
-                motion += Vector2.right;
-
-            Move(motion);
-        }
 
         public void KnifeAttack()
         {
@@ -43,8 +18,8 @@ namespace Entities
 
             action = 1;
             events.onVampireStartKnifeAttack.Invoke();
-            knife.Use();
         }
+
 
         public void Bite()
         {
@@ -52,7 +27,6 @@ namespace Entities
 
             action = 2;
             events.onVampireStartBite.Invoke();
-            teeth.Use();
         }
 
         public void TurnToBat()

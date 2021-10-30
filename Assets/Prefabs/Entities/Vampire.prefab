@@ -312,3 +312,16 @@ MonoBehaviour:
   avatarAnimator: {fileID: 2953630822579901284}
   teeth: {fileID: 1016357642532833272}
   knife: {fileID: 6118787607564957474}
+--- !u!114 &7006689091392600558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4413817116810421320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c61a8225a70dc23459ab8b8c79e86076, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlledEntity: {fileID: 172553375089251448}

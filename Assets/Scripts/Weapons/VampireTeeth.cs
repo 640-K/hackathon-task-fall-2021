@@ -8,9 +8,9 @@ public class VampireTeeth : BladeWeapon
     public float healingFactor = 0.35f;
 
 
-    public override uint Use()
+    public override void Use()
     {
-        if (entitiesInRange.Count == 0) return 0;
+        if (entitiesInRange.Count == 0) return;
 
         Entities.Entity closest = entitiesInRange[0];
         float closestDistance = ((Vector2)(owner.transform.position - closest.transform.position)).magnitude;
@@ -26,9 +26,7 @@ public class VampireTeeth : BladeWeapon
             }
         }
 
-        uint damageDealt = closest.Hurt(damage);
+        damageDealt = closest.Hurt(damage);
         owner.Heal((uint)(damageDealt * healingFactor));
-
-        return damageDealt;
     }
 }
