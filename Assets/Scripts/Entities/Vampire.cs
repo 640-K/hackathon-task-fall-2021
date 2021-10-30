@@ -52,24 +52,19 @@ namespace Entities
         {
             if (state != 2)
             {
-                state = 3;
+                avatarAnimator.SetBool("batMode", true);
                 events.onVampireTurnToBat.Invoke();
             }
         }
 
         public void TurnToNormal()
         {
-            if(state == 3)
+            if (state != 2)
             {
-                if (motionDirection.magnitude > 0)
-                    state = 1;
-                else
-                    state = 0;
-
+                avatarAnimator.SetBool("batMode", false);
                 events.onVampireTurnToNormal.Invoke();
             }
         }
-
     }
 
     partial class EntityEvents
