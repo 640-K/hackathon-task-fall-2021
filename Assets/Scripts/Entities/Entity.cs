@@ -10,6 +10,11 @@ namespace Entities
 
     public class Entity : MonoBehaviour
     {
+        public const string deathTrigger = "dead";
+        public const string stateEnum = "state";
+        public const string actionEnum = "action";
+
+
         [Header("Features")]
         public uint health;
 
@@ -39,18 +44,17 @@ namespace Entities
 
 
 
-
-
         public uint currentHealth { get; protected set; }
+
+        // manages continuous states (like Idle or Move)
+        public int state { get => avatarAnimator.GetInteger(stateEnum); set => avatarAnimator.SetInteger(stateEnum, value); }
+
+        // manages activatable states (like Attack or Hurt)
+        public int action { get => avatarAnimator.GetInteger(actionEnum); set => avatarAnimator.SetInteger(actionEnum, value);  }
+
+
         public Vector2 motionDirection { get; protected set; }
         public bool dead { get => currentHealth == 0; }
-
-        public int state { get => _state; set { avatarAnimator.SetInteger("state", value); _state = value; } }
-        private int _state = 0;
-
-        public int action { get => _action; set { avatarAnimator.SetInteger("action", value); _action = value; } }
-        private int _action = 0;
-
 
 
 
@@ -87,8 +91,6 @@ namespace Entities
 
 
 
-
-
         public virtual void Move(Vector2 direction)
         {
             direction.Normalize();
@@ -117,16 +119,17 @@ namespace Entities
             motionDirection = direction;
         }
 
-        public void Hurt(uint damage)
+        public uint Hurt(uint damage)
         {
-            if (dead && damage == 0) return;
+            if (dead && damage == 0) return 0;
 
-            currentHealth -= Math.Min(damage, currentHealth);
+            uint damageDealt = Math.Min(damage, currentHealth);
+            currentHealth -= damageDealt;
 
 
             if (dead)
             {
-                avatarAnimator.SetTrigger("dead");
+                avatarAnimator.SetTrigger(deathTrigger);
                 events.onDie.Invoke();
             }
             else
@@ -134,6 +137,8 @@ namespace Entities
                 action = 3;
                 events.onHurt.Invoke();
             }
+
+            return damageDealt;
         }
 
         public void Heal(uint factor)
@@ -144,10 +149,11 @@ namespace Entities
             events.onHeal.Invoke();
         }
 
-        public void Kill() => Hurt(health);
-
-        
+        public void Kill() => Hurt(health);    
     }
+
+
+
 
     [Serializable]
     public partial class EntityEvents

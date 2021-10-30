@@ -8,7 +8,8 @@ namespace Entities
 {
     public class Vampire : Entity
     {
-        
+        public VampireTeeth teeth;
+        public BladeWeapon knife;
         void Update()
         {
             if (Input.GetButtonDown("Fire1"))
@@ -38,32 +39,36 @@ namespace Entities
 
         public void KnifeAttack()
         {
+            if (dead) return;
+
             action = 1;
             events.onVampireStartKnifeAttack.Invoke();
+            knife.Use();
         }
 
         public void Bite()
         {
+            if (dead) return;
+
             action = 2;
             events.onVampireStartBite.Invoke();
+            teeth.Use();
         }
 
         public void TurnToBat()
         {
-            if (state != 2)
-            {
-                avatarAnimator.SetBool("batMode", true);
-                events.onVampireTurnToBat.Invoke();
-            }
+            if (dead) return;
+
+            avatarAnimator.SetBool("batMode", true);
+            events.onVampireTurnToBat.Invoke();
         }
 
         public void TurnToNormal()
         {
-            if (state != 2)
-            {
-                avatarAnimator.SetBool("batMode", false);
-                events.onVampireTurnToNormal.Invoke();
-            }
+            if (dead) return;
+
+            avatarAnimator.SetBool("batMode", false);
+            events.onVampireTurnToNormal.Invoke();  
         }
     }
 

@@ -9,7 +9,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2580143609405048254, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
       propertyPath: m_Name
-      value: Mob
+      value: FemaleVillager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3923446906190443154, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8282444f62193544496a8013ef1dc874, type: 2}
+    - target: {fileID: 4311541622360164534, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: m_Size.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311541622360164534, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: m_Size.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311541622360164534, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8356354729213926755, guid: d91d33559154f0a4586b39c4188c02e7, type: 3}
+    - target: {fileID: 4311541622360164534, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4749230587034931398, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
       propertyPath: m_RootOrder
