@@ -281,23 +281,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62252631}
   m_CullTransparentMesh: 1
---- !u!1 &368193170 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7330069899534458163, guid: b3848b2589624994ab489aa6d5da2e5e, type: 3}
-  m_PrefabInstance: {fileID: 1292901194}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &368193175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 368193170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1aa2121f7996d7a4192ab08c971a0e1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &400891096
 GameObject:
   m_ObjectHideFlags: 0
@@ -761,6 +744,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -2904457877120967500, guid: 8932fbe69755d2043a532a19562b877b, type: 3}
+    - target: {fileID: 2691509881428896064, guid: b3848b2589624994ab489aa6d5da2e5e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691509881428896064, guid: b3848b2589624994ab489aa6d5da2e5e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691509881428896064, guid: b3848b2589624994ab489aa6d5da2e5e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691509881428896064, guid: b3848b2589624994ab489aa6d5da2e5e, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4413817116810421320, guid: b3848b2589624994ab489aa6d5da2e5e, type: 3}
       propertyPath: m_Name
       value: Vampire
