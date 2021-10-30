@@ -126,7 +126,7 @@ namespace Entities
 
             if (dead)
             {
-                action = -1;
+                avatarAnimator.SetTrigger("dead");
                 events.onDie.Invoke();
             }
             else
