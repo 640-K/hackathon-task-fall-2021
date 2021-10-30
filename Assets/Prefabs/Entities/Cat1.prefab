@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 196039796945649465, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1496763579881266066, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: m_Size.y
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2580143609405048254, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
       propertyPath: m_Name
       value: Cat1
@@ -15,6 +23,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 1a12a82f2dfbd6c48874ba250302c62e, type: 2}
+    - target: {fileID: 4216763851076077525, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+      propertyPath: m_Size.y
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4311541622360164534, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
       propertyPath: m_Size.x
       value: 0.32

@@ -2,31 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VampireTeeth : BladeWeapon
+namespace Weapons
 {
-    [Range(0, 1)]
-    public float healingFactor = 0.35f;
-
-
-    public override void Use()
+    public class VampireTeeth : BladeWeapon
     {
-        if (entitiesInRange.Count == 0) return;
+        [Range(0, 1)]
+        public float healingFactor = 0.35f;
 
-        Entities.Entity closest = entitiesInRange[0];
-        float closestDistance = ((Vector2)(owner.transform.position - closest.transform.position)).magnitude;
-        
-        for (int i = 1; i < entitiesInRange.Count; i++) 
+
+        public override void Use()
         {
-            float distance = ((Vector2)(entitiesInRange[i].transform.position - closest.transform.position)).magnitude;
+            if (entitiesInRange.Count == 0) return;
 
-            if(closestDistance > distance)
+            Entities.Entity closest = entitiesInRange[0];
+            float closestDistance = ((Vector2)(owner.transform.position - closest.transform.position)).magnitude;
+
+            for (int i = 1; i < entitiesInRange.Count; i++)
             {
-                closest = entitiesInRange[i];
-                closestDistance = distance;
-            }
-        }
+                float distance = ((Vector2)(entitiesInRange[i].transform.position - closest.transform.position)).magnitude;
 
-        damageDealt = closest.Hurt(damage);
-        owner.Heal((uint)(damageDealt * healingFactor));
+                if (closestDistance > distance)
+                {
+                    closest = entitiesInRange[i];
+                    closestDistance = distance;
+                }
+            }
+
+            damageDealt = closest.Hurt(damage);
+            owner.Heal((uint)(damageDealt * healingFactor));
+        }
     }
 }
