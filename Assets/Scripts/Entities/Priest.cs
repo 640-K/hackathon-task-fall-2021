@@ -12,7 +12,14 @@ namespace Entities
 
         public void UseStaff()
         {
-            staff.Use();
+            action = 1;
+        }
+
+        public void UseEffectArea()
+        {
+            if (!staff.effectAvailable) return;
+
+            action = 2;
         }
     }
 }

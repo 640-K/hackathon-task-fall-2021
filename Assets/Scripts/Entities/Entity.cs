@@ -47,10 +47,10 @@ namespace Entities
         public uint currentHealth { get; protected set; }
 
         // manages continuous states (like Idle or Move)
-        public int state { get => avatarAnimator.GetInteger(stateEnum); set => avatarAnimator.SetInteger(stateEnum, value); }
+        public int state { get => avatarAnimator.GetInteger(stateEnum); set { if (!dead) avatarAnimator.SetInteger(stateEnum, value); } }
 
         // manages activatable states (like Attack or Hurt)
-        public int action { get => avatarAnimator.GetInteger(actionEnum); set => avatarAnimator.SetInteger(actionEnum, value);  }
+        public int action { get => avatarAnimator.GetInteger(actionEnum); set { if (!dead) avatarAnimator.SetInteger(actionEnum, value); } }
 
 
         public Vector2 motionDirection { get; protected set; }
