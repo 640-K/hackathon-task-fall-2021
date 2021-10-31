@@ -32,7 +32,7 @@ namespace UI {
                 slider.value += changeRate;
         }
 
-        public void HealthChangedListener() {
+        public void HealthChangedListener(uint health) {
             UpdateHealthBarSmoothly(entity.currentHealth);
         }
 
