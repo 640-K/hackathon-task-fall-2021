@@ -15,7 +15,7 @@ public class Aura : MonoBehaviour
 
 
     public float strength => aliveTotal / (float)villagersTotal;   
-    public uint dailyDamageToVampires => (uint)(antiVampireDamage * aliveTotal);
+    public uint dailyDamageToVampires => (uint)(antiVampireDamage * strength);
     public Vampire vampire { get; protected set; }
 
 

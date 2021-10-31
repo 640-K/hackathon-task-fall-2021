@@ -141,6 +141,8 @@ namespace Entities
             return damageDealt;
         }
 
+        public void Kill() => Hurt(health);
+
         public uint Heal(uint factor)
         {
             if (dead) return 0;
@@ -153,7 +155,16 @@ namespace Entities
             return healingDealt;
         }
 
-        public void Kill() => Hurt(health);    
+        public void Resurrect()
+        {
+            if (!dead) return;
+
+            currentHealth = health;
+
+            avatarAnimator.Rebind();
+
+            events.onResurrect.Invoke();
+        }
     }
 
 
@@ -168,5 +179,6 @@ namespace Entities
         public UnityEvent<uint> onDie;
         public UnityEvent<uint> onHurt;
         public UnityEvent<uint> onHeal;
+        public UnityEvent onResurrect;
     }
 }
