@@ -5018,7 +5018,8 @@ PrefabInstance:
       propertyPath: healthBarCanvas
       value: 
       objectReference: {fileID: 725955038}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8046130643125824663, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
 --- !u!1001 &558469862
 PrefabInstance:
@@ -8666,6 +8667,7 @@ GameObject:
   - component: {fileID: 840806978}
   - component: {fileID: 840806980}
   - component: {fileID: 840806979}
+  - component: {fileID: 840806981}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -8721,6 +8723,20 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &840806981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840806977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32c92b60c1bb4df0a21fea6f60186d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBarCanvas: {fileID: 725955038}
+  auraBarCanvas: {fileID: 1207680291}
 --- !u!70 &846758900 stripped
 CapsuleCollider2D:
   m_CorrespondingSourceObject: {fileID: 121080843838105916, guid: 9e25bf4695d70c84c91c328a28ca2a8b, type: 3}

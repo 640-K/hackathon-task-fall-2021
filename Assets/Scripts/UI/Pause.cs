@@ -7,10 +7,11 @@ namespace UI {
     {
         public GameObject healthBarCanvas;
         public GameObject auraBarCanvas;
+        public GameObject pause;
 
         void Start()
         {
-            SetActiveChildren(false);
+            pause.SetActive(false);
         }
 
         void Update()
@@ -25,18 +26,12 @@ namespace UI {
             }
         }
 
-        private void SetActiveChildren(bool active)
-        {
-            foreach (Transform child in transform)
-            {
-                child.gameObject.SetActive(active);
-            }
-        }
 
         public void StopGame()
         {
             Time.timeScale = 0;
-            SetActiveChildren(true);
+            pause.SetActive(true);
+
             healthBarCanvas.SetActive(false);
             auraBarCanvas.SetActive(false);
         }
@@ -44,7 +39,7 @@ namespace UI {
         public void ResumeGame()
         {
             Time.timeScale = 1;
-            SetActiveChildren(false);
+            pause.SetActive(false);
             healthBarCanvas.SetActive(true);
             auraBarCanvas.SetActive(true);
         }
