@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 92fd24228ace5384bac915cb01a0a204
+guid: ed470fe87f4537747846a997afe49d3b
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -8,10 +8,8 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: 1fa25d03934ea624a82bf2fcee6f0873, type: 3}
-  missingFiles:
-  - Assets/Map/Assets/Map/Forest.tsx
-  errors:
-  - 'Missing tileset asset: Assets/Map/Forest.tsx'
+  missingFiles: []
+  errors: []
   warnings: []
   missingSortingLayers: []
   missingLayers: []

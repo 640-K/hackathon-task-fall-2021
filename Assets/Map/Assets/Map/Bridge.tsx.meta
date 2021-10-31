@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1e4328625da3d4e0a80d4f58cea2609b
+guid: 3898d950a286f6b4eadd058ec79afdfb
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -8,10 +8,8 @@ ScriptedImporter:
   assetBundleName: 
   assetBundleVariant: 
   script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
-  missingFiles:
-  - Assets/Map/Assets/Map/Bridges.png
-  errors:
-  - 'Missing texture asset: Bridges.png'
+  missingFiles: []
+  errors: []
   warnings: []
   missingSortingLayers: []
   missingLayers: []
@@ -19,7 +17,7 @@ ScriptedImporter:
   importerVersion: 11
   pixelsPerUnit: 100
   edgesPerEllipse: 32
-  numberOfObjectsImported: 2
+  numberOfObjectsImported: 393
   useSpriteAtlas: 1
   atlasWidth: 2048
   atlasHeight: 2048
