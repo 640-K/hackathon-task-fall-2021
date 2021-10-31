@@ -255,6 +255,7 @@ MonoBehaviour:
   accelerationRate: 0.25
   deccelerationRate: 0.75
   maneuverability: 1
+  believerLevel: 0.9
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -272,6 +273,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     onHeal:
+      m_PersistentCalls:
+        m_Calls: []
+    onResurrect:
       m_PersistentCalls:
         m_Calls: []
     onVampireStartKnifeAttack:

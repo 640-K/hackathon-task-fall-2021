@@ -15,8 +15,11 @@ namespace Entities
         public const string actionEnum = "action";
 
 
+
         [Header("Features")]
         public uint health = 100;
+        public float believerLevel = 0.25f;
+
 
 
         [Header("Movement")]
@@ -30,6 +33,8 @@ namespace Entities
 
         [Range(0, 1)] [Tooltip("Ability to resist excentric force when turning. If 1 is given, the excentic force does not influence the movement.")]
         public float maneuverability = 1f;
+
+        public float speedFactor = 1f;
 
 
         [Space(10)]
@@ -52,9 +57,9 @@ namespace Entities
         // manages activatable states (like Attack or Hurt)
         public int action { get => avatarAnimator.GetInteger(actionEnum); set { if (!dead) avatarAnimator.SetInteger(actionEnum, value); } }
 
-
         public Vector2 motionDirection { get; protected set; }
         public bool dead { get => currentHealth == 0; }
+        
 
 
 
@@ -81,7 +86,7 @@ namespace Entities
                 Vector2 perpMotionDirection = Vector2.Perpendicular(motionDirection);
                 physicsBody.AddForce(-perpMotionDirection * physicsBody.mass * Vector2.Dot(physicsBody.velocity, perpMotionDirection) * maneuverability, ForceMode2D.Impulse);
 
-                physicsBody.AddForce(motionDirection * physicsBody.mass * (maxSpeed - Vector2.Dot(physicsBody.velocity, motionDirection)) * accelerationRate, ForceMode2D.Impulse);
+                physicsBody.AddForce(motionDirection * physicsBody.mass * (maxSpeed * speedFactor - Vector2.Dot(physicsBody.velocity, motionDirection)) * accelerationRate, ForceMode2D.Impulse);
 
                 events.onMove.Invoke();
             }

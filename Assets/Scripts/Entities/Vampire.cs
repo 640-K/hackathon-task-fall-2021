@@ -9,8 +9,12 @@ namespace Entities
 {
     public class Vampire : Entity
     {
+        public const string batModeBool = "batMode";
+
         public VampireTeeth teeth;
         public MeleeWeapon knife;
+
+        public bool batMode { get => avatarAnimator.GetBool(batModeBool); set => avatarAnimator.SetBool(batModeBool, value); }
 
 
         public void KnifeAttack()
@@ -34,7 +38,8 @@ namespace Entities
         {
             if (dead) return;
 
-            avatarAnimator.SetBool("batMode", true);
+            batMode = true;
+            speedFactor = 1.5f;
             events.onVampireTurnToBat.Invoke();
         }
 
@@ -42,7 +47,8 @@ namespace Entities
         {
             if (dead) return;
 
-            avatarAnimator.SetBool("batMode", false);
+            batMode = false;
+            speedFactor = 1;
             events.onVampireTurnToNormal.Invoke();  
         }
     }

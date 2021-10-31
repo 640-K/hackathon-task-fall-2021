@@ -5033,6 +5033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  believerLevel: 1
   maxSpeed: 1.2
   accelerationRate: 0.5
   deccelerationRate: 1
@@ -5075,4 +5076,4 @@ MonoBehaviour:
   physicsBody: {fileID: 8328036237085136966}
   collisionBounds: {fileID: 5210708298998117144}
   avatarAnimator: {fileID: 7703221551661898264}
-  resurrection: {fileID: 0}
+  resurrection: {fileID: 290449591769166295}

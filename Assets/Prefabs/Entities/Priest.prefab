@@ -103,7 +103,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2580143609405048254, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
       propertyPath: m_Name
-      value: Priest1
+      value: Priest
       objectReference: {fileID: 0}
     - target: {fileID: 3923446906190443154, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
       propertyPath: m_Controller
@@ -282,6 +282,7 @@ MonoBehaviour:
   accelerationRate: 0.1
   deccelerationRate: 1
   maneuverability: 1
+  believerLevel: 2.5
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -299,6 +300,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     onHeal:
+      m_PersistentCalls:
+        m_Calls: []
+    onResurrect:
       m_PersistentCalls:
         m_Calls: []
     onVampireStartKnifeAttack:

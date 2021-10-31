@@ -25,6 +25,12 @@ public class VampireController : PlayerController
         if (Input.GetButtonDown("Fire2"))
             controlledVampire.Bite();
 
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            if (controlledVampire.batMode) controlledVampire.TurnToNormal();
+            else controlledVampire.TurnToBat();
+        }
+
         base.ApplyMotion();
     }
 }
