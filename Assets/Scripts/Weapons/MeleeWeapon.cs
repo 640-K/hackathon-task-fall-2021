@@ -36,7 +36,7 @@ namespace Weapons
             damageDealt = 0;
 
             foreach (var entity in entitiesInRange)
-                if (entity as Entities.Vampire == null)
+                if (entity as Vampire == null)
                     damageDealt += entity.Hurt(damage);
         }
     }

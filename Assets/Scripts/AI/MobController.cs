@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using AI;
+using Entities;
 
 public class MobController : EntityController
 {
@@ -111,9 +112,11 @@ public class MobController : EntityController
         }else
             playerNode = ground.pathfinding.grid.getNodeFromWorldPosition(target.position);
 
-        if (!isScared&&Vector2.Distance(target.position, transform.position) < stopAttack)
+        if (!isScared && Vector2.Distance(target.position, transform.position) < stopAttack)
+        {
             playerNode = null;
-            // ATTACK
+            Attack();
+        }
         
         if (playerNode == null || startNode == null)
         {
@@ -185,4 +188,39 @@ public class MobController : EntityController
         Gizmos.DrawWireSphere(transform.position, followRadius);
     }
     protected override void Update() => ApplyMotion();
+
+
+    protected virtual void Attack()
+    {
+        Priest priest = controlledEntity as Priest;
+
+        if(priest != null)
+        {
+            if(Random.Range(0f, 100f) < 33f)
+                priest.UseEffectArea();
+            else
+                priest.UseStaff();
+
+            return;
+        }
+
+
+        BattleMonk monk = controlledEntity as BattleMonk;
+
+        if(monk != null)
+        {
+            if (Random.Range(0f, 100f) < 90f)
+                monk.Attack();
+            else
+                monk.Speak();
+
+            return;
+        }
+
+
+        Monk healerMonk = controlledEntity as Monk;
+        
+        if(healerMonk != null)
+           healerMonk.Worship();
+    }
 }

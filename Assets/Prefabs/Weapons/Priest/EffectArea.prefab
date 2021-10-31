@@ -4850,7 +4850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
-  damage: 0
+  damage: 10
   particles: {fileID: 354604948789472066}
 --- !u!58 &-8912358366855228686
 CircleCollider2D:
