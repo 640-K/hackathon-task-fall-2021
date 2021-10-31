@@ -60,7 +60,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.1, y: 0.025}
+  m_Size: {x: 0.2, y: 0.1}
   m_Direction: 1
 --- !u!1001 &8214424960869163014
 PrefabInstance:
@@ -251,11 +251,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 250
+  believerLevel: 0.9
   maxSpeed: 1
   accelerationRate: 0.25
   deccelerationRate: 0.75
   maneuverability: 1
-  believerLevel: 0.9
+  speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:

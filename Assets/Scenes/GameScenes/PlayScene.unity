@@ -892,7 +892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6498901008843338498, guid: 0a09f2721b3957e48a9ac7f2ff6cb4cd, type: 3}
       propertyPath: m_RootOrder
-      value: 73
+      value: 72
       objectReference: {fileID: 0}
     - target: {fileID: 6498901008843338498, guid: 0a09f2721b3957e48a9ac7f2ff6cb4cd, type: 3}
       propertyPath: m_AnchorMax.x
@@ -966,8 +966,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6498901008843338496, guid: 0a09f2721b3957e48a9ac7f2ff6cb4cd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0a09f2721b3957e48a9ac7f2ff6cb4cd, type: 3}
+--- !u!224 &20453384 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6498901008843338498, guid: 0a09f2721b3957e48a9ac7f2ff6cb4cd, type: 3}
+  m_PrefabInstance: {fileID: 20453383}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &24956757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1487,6 +1493,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -1809,6 +1816,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -1900,6 +1908,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -2091,6 +2100,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -2751,6 +2761,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -2909,6 +2920,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -3086,6 +3098,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -3356,9 +3369,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vampire: {fileID: 774235491}
-  lobbyTransition: {fileID: 879756503}
-  loseTransition: {fileID: 879756503}
-  winTransition: {fileID: 879756503}
+  lobbyTransition: {fileID: 1464371670}
+  loseTransition: {fileID: 1684475658}
+  winTransition: {fileID: 1739382808}
   crossPrefab: {fileID: 5852619181544340829, guid: 5d173e467224a68468247edae4875898, type: 3}
   auraBar: {fileID: 996690551}
   time: {fileID: 797985905}
@@ -3941,55 +3954,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6193216245737980166, guid: 5a3b84115d0b3be4783db16522d79c73, type: 3}
   m_PrefabInstance: {fileID: 601189096}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &421134164
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 421134166}
-  - component: {fileID: 421134165}
-  m_Layer: 0
-  m_Name: LoseTransition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &421134165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 421134164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0fa05f18539b7147a23152aaeefdc8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadingScreen: {fileID: 272738991}
-  targetScene: LoseScene
-  progressBar: {fileID: 849173546}
-  onTransition:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!4 &421134166
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 421134164}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 483.70035, y: 432.4604, z: -96.77176}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 72
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &421626859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4095,6 +4059,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -4239,6 +4204,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -4520,6 +4486,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -5828,6 +5795,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -6111,6 +6079,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -6221,6 +6190,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -6379,6 +6349,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -6915,6 +6886,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -8731,6 +8703,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -8774,17 +8747,6 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 4210070844806726242, guid: 9e25bf4695d70c84c91c328a28ca2a8b, type: 3}
   m_PrefabInstance: {fileID: 2040870458}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &879756503 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6498901008843338496, guid: 0a09f2721b3957e48a9ac7f2ff6cb4cd, type: 3}
-  m_PrefabInstance: {fileID: 20453383}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0fa05f18539b7147a23152aaeefdc8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &880947127 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9176990160409324852, guid: f38fd7d929fa6a7479dc6704ca3637af, type: 3}
@@ -8873,6 +8835,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -9017,6 +8980,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -9577,6 +9541,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -12868,6 +12833,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -13302,6 +13268,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -13746,6 +13713,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -13842,6 +13810,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -14082,6 +14051,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -14168,6 +14138,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -14341,6 +14312,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -14647,6 +14619,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -15800,6 +15773,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -15954,6 +15928,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -16243,6 +16218,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -16286,6 +16262,55 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 4210070844806726242, guid: 9e25bf4695d70c84c91c328a28ca2a8b, type: 3}
   m_PrefabInstance: {fileID: 38671889}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1464371668
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1464371669}
+  - component: {fileID: 1464371670}
+  m_Layer: 0
+  m_Name: Start
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1464371669
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464371668}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.830322, y: -7.9077454, z: -665.5471}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 20453384}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1464371670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464371668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fa05f18539b7147a23152aaeefdc8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 272738991}
+  targetScene: StartScene
+  progressBar: {fileID: 849173546}
+  onTransition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1475552312 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6193216245737980166, guid: 5a3b84115d0b3be4783db16522d79c73, type: 3}
@@ -16401,6 +16426,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -17006,6 +17032,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -17363,6 +17390,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -17566,6 +17594,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -17743,6 +17772,55 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6043479584292990947, guid: 7417830ca3d552f47a898fcfe4eab4eb, type: 3}
   m_PrefabInstance: {fileID: 1249086993}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1684475656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1684475657}
+  - component: {fileID: 1684475658}
+  m_Layer: 0
+  m_Name: Lose
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1684475657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684475656}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.830322, y: -7.9077454, z: -665.5471}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 20453384}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1684475658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1684475656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fa05f18539b7147a23152aaeefdc8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 272738991}
+  targetScene: LoseScene
+  progressBar: {fileID: 849173546}
+  onTransition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1684875345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18069,6 +18147,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -18112,6 +18191,55 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 4210070844806726242, guid: 9e25bf4695d70c84c91c328a28ca2a8b, type: 3}
   m_PrefabInstance: {fileID: 279315807}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1739382806
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1739382807}
+  - component: {fileID: 1739382808}
+  m_Layer: 0
+  m_Name: Win
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1739382807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739382806}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.830322, y: -7.9077454, z: -665.5471}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 20453384}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1739382808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739382806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fa05f18539b7147a23152aaeefdc8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  loadingScreen: {fileID: 272738991}
+  targetScene: WinScene
+  progressBar: {fileID: 849173546}
+  onTransition:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1741594246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6726920186770789943, guid: ad61f5d64c21cec41b8e3563b89bc052, type: 3}
@@ -18160,6 +18288,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -18376,6 +18505,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -18491,6 +18621,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -20156,6 +20287,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -20271,6 +20403,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -20696,55 +20829,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6193216245737980166, guid: 5a3b84115d0b3be4783db16522d79c73, type: 3}
   m_PrefabInstance: {fileID: 1379250187}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2017229318
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2017229320}
-  - component: {fileID: 2017229319}
-  m_Layer: 0
-  m_Name: WinTransition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2017229319
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017229318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0fa05f18539b7147a23152aaeefdc8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  loadingScreen: {fileID: 272738991}
-  targetScene: WinScene
-  progressBar: {fileID: 849173546}
-  onTransition:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!4 &2017229320
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2017229318}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 483.70035, y: 432.4604, z: -96.77176}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 74
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2017765884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2766831392382045678, guid: 6358f5b78796faf4c80c61f458c0fb83, type: 3}
@@ -21464,6 +21548,7 @@ MonoBehaviour:
   deccelerationRate: 0.5
   maneuverability: 0.5
   speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:

@@ -67,6 +67,8 @@ public class GameplayManager : MonoBehaviour
             entity.events.onResurrect.AddListener(() => OnResurrect(entity));
         }
 
+        vampire.events.onDie.AddListener((uint damage) => OnLose());
+
 
         StartCoroutine(DayCoroutine());
 
@@ -150,13 +152,6 @@ public class GameplayManager : MonoBehaviour
        auraStrength = believerLevel / entities.Count;
 
         vampire.Hurt((uint)(auraDamage * auraStrength));
-
-        if(vampire.dead)
-        {
-            gameOver = true;
-            OnLose();
-            onLose.Invoke();
-        }
     }
 
     public void OnWin()
@@ -166,6 +161,8 @@ public class GameplayManager : MonoBehaviour
 
     public void OnLose()
     {
+        gameOver = true;
+        onLose.Invoke();
         loseTransition.Transition();
     }
 
