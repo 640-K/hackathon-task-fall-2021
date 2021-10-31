@@ -29,11 +29,10 @@ namespace AI
 
         }
 
-        private Vector3 GetWorldPosition(int x, int y)
+        public Vector3 GetWorldPosition(int x, int y)
         {
             return new Vector3(x, y) * size + startPosition;
         }
-
         public Vector3 GetLocalPosition(int x, int y)
         {
             return new Vector3(x, y) * size + new Vector3(size / 2, size / 2, 0);
@@ -46,7 +45,7 @@ namespace AI
 
         public PathNode GetPathNode(int x, int y)
         {
-            if (x<width && y<height)
+            if (x<width && y<height && x>=0&&y>=0)
                 return gridArray[x, y];
             return null;
         }
