@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entities;
 using UnityEngine.Events;
+using System.Diagnostics;
+
 
 public class GameplayManager : MonoBehaviour
 {
@@ -21,6 +23,8 @@ public class GameplayManager : MonoBehaviour
 
     public float dayDuration = 180f;
 
+    public float currentDaytime { get => Mathf.Min((float)currentDayDuration.Elapsed.TotalSeconds / dayDuration, 1f); }
+
     public int overallScore = 0; 
     public int currentDay = 0;
     public bool gameOver = false;
@@ -38,6 +42,11 @@ public class GameplayManager : MonoBehaviour
     public UnityEvent onLose;
 
 
+
+
+
+
+    Stopwatch currentDayDuration = null;
     public void Start()
     {
         if (instance != null) return;
@@ -58,7 +67,10 @@ public class GameplayManager : MonoBehaviour
             while (!gameOver)
             {
                 AtTheBeginningOfDay(); onDayBegin.Invoke();
+
+                currentDayDuration = Stopwatch.StartNew();
                 yield return new WaitForSeconds(dayDuration);
+                currentDayDuration.Stop();
                 AtTheEndOfDay(); onDayEnd.Invoke();
                 currentDay++;
             }

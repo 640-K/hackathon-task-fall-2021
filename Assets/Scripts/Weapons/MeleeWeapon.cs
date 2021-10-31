@@ -5,7 +5,7 @@ using Entities;
 
 namespace Weapons
 {
-    public abstract class MeleeWeapon : Weapon
+    public class MeleeWeapon : Weapon
     {
         public IReadOnlyList<Entity> entitiesInRange => _entitiesInRange;
         private List<Entity> _entitiesInRange;
@@ -29,6 +29,15 @@ namespace Weapons
 
             if (entity != null && entity != owner)
                 _entitiesInRange.Remove(entity);
+        }
+
+        public override void Use()
+        {
+            damageDealt = 0;
+
+            foreach (var entity in entitiesInRange)
+                if (entity as Entities.Vampire == null)
+                    damageDealt += entity.Hurt(damage);
         }
     }
 }
