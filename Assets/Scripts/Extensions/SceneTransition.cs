@@ -3,19 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class SceneTransition : MonoBehaviour
 {
     public GameObject loadingScreen;
     public string targetScene;
     public Image progressBar;
+    
 
-    AsyncOperation loadSceneOperation;
+    
+
+    public UnityEvent onTransition;
+
+    AsyncOperation loadSceneOperation = null;
     public void Transition()
     {
+        if (loadSceneOperation != null) return;
+
+        onTransition.Invoke();
+
         loadingScreen.SetActive(true);
-        SceneManager.LoadScene(targetScene);
         loadSceneOperation = SceneManager.LoadSceneAsync(targetScene);
+       loadSceneOperation.allowSceneActivation = false;
 
         StartCoroutine(SceneProgress(loadSceneOperation));
     }
@@ -23,12 +33,15 @@ public class SceneTransition : MonoBehaviour
 
     IEnumerator SceneProgress(AsyncOperation operation)
     {
-        while (operation.isDone)
+        progressBar.fillAmount = 0;
+        while (progressBar.fillAmount < 1)
         {
-            progressBar.fillAmount = operation.progress / 0.9f;
-            yield return null;
+            progressBar.fillAmount += Mathf.Min(operation.progress / 0.9f - progressBar.fillAmount, 0.025f);
+            yield return new WaitForSeconds(.025f);
         }
 
+
         operation.allowSceneActivation = true;
+        Destroy(this);
     }
 }
