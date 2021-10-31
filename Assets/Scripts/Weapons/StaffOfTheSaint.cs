@@ -19,9 +19,9 @@ namespace Weapons
             foreach (var entity in entitiesInRange)
             {
                 if (entity as Vampire != null)
-                    entity.Hurt((uint)(damage * Aura.aura.strength));
+                    entity.Hurt((uint)(damage * GameplayManager.instance.auraStrength));
                 else
-                    entity.Heal((uint)(healing * Aura.aura.strength));
+                    entity.Heal((uint)(healing * GameplayManager.instance.auraStrength));
             }
         }
 
@@ -50,7 +50,7 @@ namespace Weapons
                 var settings = area.particles.main;
                 settings.duration = areaEffectDuration;
 
-                area.ActivateArea(owner, (uint)(damage * Aura.aura.strength / 2), (uint)(healing * Aura.aura.strength / 2));
+                area.ActivateArea(owner, (uint)(damage * GameplayManager.instance.auraStrength / 2), (uint)(healing * GameplayManager.instance.auraStrength / 2));
 
                 area.particles.Play();
                 yield return new WaitForSeconds(areaEffectDuration);

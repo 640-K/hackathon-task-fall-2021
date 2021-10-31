@@ -329,6 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  believerLevel: 0
   maxSpeed: 1
   accelerationRate: 0.1
   deccelerationRate: 1
@@ -350,6 +351,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     onHeal:
+      m_PersistentCalls:
+        m_Calls: []
+    onResurrect:
       m_PersistentCalls:
         m_Calls: []
     onVampireStartKnifeAttack:

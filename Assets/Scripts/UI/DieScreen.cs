@@ -38,7 +38,7 @@ namespace UI {
             }
         }
 
-        public void EntityDieHandler(uint health)
+        public void EntityDieHandler(uint damageDealt)
         {
             SetActiveChildren(true);
         }
