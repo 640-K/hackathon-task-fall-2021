@@ -21,6 +21,11 @@
    <object id="1" x="-0.363636" y="17.6364" width="16" height="9.63636"/>
   </objectgroup>
  </tile>
+ <tile id="9">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="17" width="8" height="15"/>
+  </objectgroup>
+ </tile>
  <tile id="22">
   <objectgroup draworder="index" id="2">
    <object id="1" x="2" y="0" width="30" height="32"/>
@@ -29,6 +34,11 @@
  <tile id="23">
   <objectgroup draworder="index" id="2">
    <object id="1" x="0" y="0" width="32" height="32"/>
+  </objectgroup>
+ </tile>
+ <tile id="24">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="8.0625" height="32"/>
   </objectgroup>
  </tile>
  <tile id="25">
@@ -73,32 +83,42 @@
  </tile>
  <tile id="37">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="2" y="0" width="30" height="32"/>
+   <object id="1" x="2" y="0" width="30" height="23.0625"/>
   </objectgroup>
  </tile>
  <tile id="38">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="32" height="32"/>
+   <object id="1" x="0" y="0" width="32" height="23.0625"/>
+  </objectgroup>
+ </tile>
+ <tile id="39">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="8.0625" height="22.9375"/>
   </objectgroup>
  </tile>
  <tile id="40">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="2" y="0" width="30" height="32"/>
+   <object id="1" x="2" y="0" width="30" height="23.125"/>
   </objectgroup>
  </tile>
  <tile id="41">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="32" height="32"/>
+   <object id="1" x="0" y="0" width="32" height="23.1875"/>
+  </objectgroup>
+ </tile>
+ <tile id="42">
+  <objectgroup draworder="index" id="2">
+   <object id="1" x="0" y="0" width="19" height="22.9375"/>
   </objectgroup>
  </tile>
  <tile id="43">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="1" y="0" width="31" height="32"/>
+   <object id="1" x="1" y="0" width="31" height="23"/>
   </objectgroup>
  </tile>
  <tile id="44">
   <objectgroup draworder="index" id="2">
-   <object id="1" x="0" y="0" width="32" height="32"/>
+   <object id="1" x="0" y="0" width="32" height="23.125"/>
   </objectgroup>
  </tile>
  <tile id="48">
