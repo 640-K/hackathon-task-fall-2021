@@ -38,6 +38,7 @@ public class MobController : EntityController
 
     public bool isScared = false;
 
+    public bool isCllanuyaca;
 
     bool isAutoWalk = true;
     private void Start()
@@ -79,30 +80,37 @@ public class MobController : EntityController
             }
             else
             {
-
-
-                if (followRadius != postFollowRadius)
-                    followRadius = postFollowRadius;
-
-                if (alwaysFollowAfterSee)
-                    alwaysFollow = true;
-                if (isScared)
+                if (isCllanuyaca)
                 {
                     if (isAllowNextStep)
-                    {
-                        isAllowNextStep = false;
+                        StartCoroutine(Clanauca());
 
-                        playerNode = generetePosition();
-                        if (controlledEntity.maxSpeed != ScaredSpeed)
-                            controlledEntity.maxSpeed = ScaredSpeed;
-                    }
-
-                    if (startNode == playerNode)
-                        isAllowNextStep = true;
                 }
                 else
-                    playerNode = ground.pathfinding.grid.getNodeFromWorldPosition(target.position);
+                {
 
+                    if (followRadius != postFollowRadius)
+                        followRadius = postFollowRadius;
+
+                    if (alwaysFollowAfterSee)
+                        alwaysFollow = true;
+                    if (isScared)
+                    {
+                        if (isAllowNextStep)
+                        {
+                            isAllowNextStep = false;
+
+                            playerNode = generetePosition();
+                            if (controlledEntity.maxSpeed != ScaredSpeed)
+                                controlledEntity.maxSpeed = ScaredSpeed;
+                        }
+
+                        if (startNode == playerNode)
+                            isAllowNextStep = true;
+                    }
+                    else
+                        playerNode = ground.pathfinding.grid.getNodeFromWorldPosition(target.position);
+                }
 
             }
             if (!isAutoWalk && Vector2.Distance(localTarget.position, transform.position) < stopBetween && followRadius != postFollowRadius)
@@ -149,6 +157,15 @@ public class MobController : EntityController
         }
         controlledEntity.Move(motion);
         return startNode == playerNode;
+    }
+
+
+    IEnumerator Clanauca()
+    {
+        isAllowNextStep = false;
+        Debug.Log("clasn");
+        yield return new WaitForSeconds(5);
+        isAllowNextStep = true;
     }
     IEnumerator MoveCoroutine()
     {
