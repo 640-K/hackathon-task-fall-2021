@@ -117,9 +117,8 @@ public class GameplayManager : MonoBehaviour
 
         if (entity as Priest != null ||  dead.Count == entities.Count)
         {
-            gameOver = true;
             OnWin();
-            onWin.Invoke();
+
         }
     }
 
@@ -156,11 +155,17 @@ public class GameplayManager : MonoBehaviour
 
     public void OnWin()
     {
+        if (gameOver) return;
+
+        gameOver = true;
+        onWin.Invoke();
         winTransition.Transition();
     }
 
     public void OnLose()
     {
+        if (gameOver) return;
+
         gameOver = true;
         onLose.Invoke();
         loseTransition.Transition();
