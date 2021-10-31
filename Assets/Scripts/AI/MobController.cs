@@ -57,6 +57,7 @@ public class MobController : EntityController
     protected bool ApplyMotion()
     {
         if (controlledEntity == null) return false;
+
         PathNode startNode = ground.pathfinding.grid.getNodeFromWorldPosition(transform.position);
 
         Vector2 motion = Vector2.zero;
@@ -75,7 +76,7 @@ public class MobController : EntityController
 
                 playerNode = ground.pathfinding.grid.getNodeFromWorldPosition(localTarget.position);
                 if (isAllowNextStep && isAutoWalk && controlledEntity.maxSpeed != ScaredSpeed)
-                    StartCoroutine(MoveCoroutine());
+                        StartCoroutine(MoveCoroutine());
             }
             else
             {
@@ -162,10 +163,18 @@ public class MobController : EntityController
     PathNode generetePosition()
     {
         PathNode startNode = ground.pathfinding.grid.getNodeFromWorldPosition(transform.position);
-        PathNode node = ground.pathfinding.grid.GetPathNode(Random.Range(startNode.x - 5, startNode.x + 5), Random.Range(startNode.y - 5, startNode.y + 5));
-        if (node != null && !node.isWalkable)
-            return generetePosition();
-        return node;
+
+
+        List<PathNode> nodes = new List<PathNode>();
+        for (int i = -3; i < 4; i++)
+            for (int j = -3; j < 4; j++)
+                if (i != 0 && j != 0)
+                {
+                    PathNode _node = ground.pathfinding.grid.GetPathNode(startNode.x + i, startNode.y + j);
+                    if (_node!=null&&_node.isWalkable)
+                        nodes.Add(_node);
+                }    
+       return nodes[Random.Range(0, nodes.Count)];
     }
 
     private void OnDrawGizmos()
