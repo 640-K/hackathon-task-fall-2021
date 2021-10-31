@@ -35,6 +35,8 @@ namespace Entities
         public float maneuverability = 1f;
 
         public float speedFactor = 1f;
+        
+        public float stonifyDuration = 1f;
 
 
         [Space(10)]
@@ -46,6 +48,8 @@ namespace Entities
         public Rigidbody2D physicsBody;
         public Collider2D collisionBounds;
         public Animator avatarAnimator;
+
+        private Renderer materialRenderer;
 
 
 
@@ -62,12 +66,39 @@ namespace Entities
         
 
 
-
         public virtual void Start()
         {
             currentHealth = health;
             motionDirection = Vector2.zero;
+
+
+            materialRenderer = avatarAnimator.GetComponent<Renderer>();
+
+
+            if (this as Vampire == null)
+            {
+                materialRenderer = avatarAnimator.gameObject.GetComponent<Renderer>();
+                events.onDie.AddListener(Die);
+            }
+
+            void Die(uint health)
+            {
+                avatarAnimator.enabled = false;
+                StartCoroutine(Stone());
+            }
+
+            IEnumerator Stone()
+            {
+                float animValue = 0f;
+                do {
+                    materialRenderer.material.SetFloat("_Range", animValue);
+                    animValue += 0.025f / stonifyDuration;
+
+                    yield return new WaitForSeconds(0.025f);
+                } while (animValue < 1);
+            }
         }
+
 
         public virtual void OnValidate()
         {
@@ -167,8 +198,11 @@ namespace Entities
             currentHealth = health;
 
             avatarAnimator.Rebind();
+            materialRenderer.material.SetFloat("_Range", 0f);
+            avatarAnimator.enabled = true;
 
             events.onResurrect.Invoke();
+
         }
     }
 
