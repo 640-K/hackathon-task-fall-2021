@@ -8,7 +8,7 @@ public class SceneTransition : MonoBehaviour
 {
     public GameObject loadingScreen;
     public string targetScene;
-    public Slider progressBar;
+    public Image progressBar;
 
     AsyncOperation loadSceneOperation;
     public void Transition()
@@ -25,7 +25,7 @@ public class SceneTransition : MonoBehaviour
     {
         while (operation.isDone)
         {
-            progressBar.value = operation.progress / 0.9f;
+            progressBar.fillAmount = operation.progress / 0.9f;
             yield return null;
         }
 
