@@ -5020,6 +5020,30 @@ CapsuleCollider2D:
   m_CorrespondingSourceObject: {fileID: 1496763579881266066, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
   m_PrefabInstance: {fileID: 6671437557406296202}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1526905383105550519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9176990160409324852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fea5da0f48ad4bd4b2b553fafd9f4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlledEntity: {fileID: 6025467645296738676}
+  ground: {fileID: 0}
+  showPath: 0
+  alwaysFollow: 0
+  showGizmos: 0
+  followRadius: 0.5
+  alwaysFollowAfterSee: 0
+  stopBetween: 0.5
+  stopAttack: 0.75
+  target: {fileID: 0}
+  localTarget: {fileID: 0}
+  isScared: 0
 --- !u!114 &6025467645296738676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5034,10 +5058,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   believerLevel: 1
-  maxSpeed: 1.2
+  maxSpeed: 0.75
   accelerationRate: 0.5
   deccelerationRate: 1
   maneuverability: 1
+  speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:

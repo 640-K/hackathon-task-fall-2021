@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f11d3427ab88da5499677500d48fb11e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  owner: {fileID: 0}
+  owner: {fileID: 7590209197986170021}
   damage: 45
 --- !u!70 &2358817557551324646
 CapsuleCollider2D:
@@ -60,7 +60,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.2, y: 0.1}
+  m_Size: {x: 0.125, y: 0.025}
   m_Direction: 1
 --- !u!1001 &8214424960869163014
 PrefabInstance:
@@ -238,6 +238,30 @@ CapsuleCollider2D:
   m_CorrespondingSourceObject: {fileID: 1496763579881266066, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
   m_PrefabInstance: {fileID: 8214424960869163014}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6437809181018539169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5922793211585127864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fea5da0f48ad4bd4b2b553fafd9f4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlledEntity: {fileID: 7590209197986170021}
+  ground: {fileID: 0}
+  showPath: 0
+  alwaysFollow: 0
+  showGizmos: 1
+  followRadius: 1
+  alwaysFollowAfterSee: 0
+  stopBetween: 1
+  stopAttack: 0.1
+  target: {fileID: 0}
+  localTarget: {fileID: 0}
+  isScared: 0
 --- !u!114 &7590209197986170021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,10 +276,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 250
   believerLevel: 0.9
-  maxSpeed: 1
+  maxSpeed: 0.65
   accelerationRate: 0.25
   deccelerationRate: 0.75
-  maneuverability: 1
+  maneuverability: 0.7
   speedFactor: 1
   stonifyDuration: 1
   events:

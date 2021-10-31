@@ -278,11 +278,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  maxSpeed: 1
+  believerLevel: 2.5
+  maxSpeed: 1.2
   accelerationRate: 0.1
   deccelerationRate: 1
   maneuverability: 1
-  believerLevel: 2.5
+  speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
