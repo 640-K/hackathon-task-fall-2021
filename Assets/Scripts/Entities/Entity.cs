@@ -16,20 +16,20 @@ namespace Entities
 
 
         [Header("Features")]
-        public uint health;
+        public uint health = 100;
 
 
         [Header("Movement")]
-        public float maxSpeed;
+        public float maxSpeed = 1f;
 
         [Range(0, 1)] [Tooltip("Ability to develop speed. If 1 is given, the speed change is instant.")]
-        public float accelerationRate;
+        public float accelerationRate = .25f;
 
         [Range(0, 1)] [Tooltip("Speed decrease when the player does not move. If 1 is given, the speed drops to 0 instantly.")]
-        public float deccelerationRate;
+        public float deccelerationRate = 1f;
 
         [Range(0, 1)] [Tooltip("Ability to resist excentric force when turning. If 1 is given, the excentic force does not influence the movement.")]
-        public float maneuverability;
+        public float maneuverability = 1f;
 
 
         [Space(10)]
@@ -130,12 +130,12 @@ namespace Entities
             if (dead)
             {
                 avatarAnimator.SetTrigger(deathTrigger);
-                events.onDie.Invoke();
+                events.onDie.Invoke(damageDealt);
             }
             else
             {
                 action = 3;
-                events.onHurt.Invoke();
+                events.onHurt.Invoke(damageDealt);
             }
 
             return damageDealt;
@@ -145,12 +145,12 @@ namespace Entities
         {
             if (dead) return 0;
 
-            uint amount = Math.Min(factor, health - currentHealth);
-            currentHealth += amount;
+            uint healingDealt = Math.Min(factor, health - currentHealth);
+            currentHealth += healingDealt;
 
-            events.onHeal.Invoke();
+            events.onHeal.Invoke(healingDealt);
 
-            return amount;
+            return healingDealt;
         }
 
         public void Kill() => Hurt(health);    
@@ -165,8 +165,8 @@ namespace Entities
         public UnityEvent onStartMoving;
         public UnityEvent onMove;
         public UnityEvent onStopMoving;
-        public UnityEvent onDie;
-        public UnityEvent onHurt;
-        public UnityEvent onHeal;
+        public UnityEvent<uint> onDie;
+        public UnityEvent<uint> onHurt;
+        public UnityEvent<uint> onHeal;
     }
 }
