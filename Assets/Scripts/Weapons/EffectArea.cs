@@ -5,7 +5,7 @@ using Entities;
 
 namespace Weapons
 {
-    public class EffectArea : SplashWeapon
+    public class EffectArea : MeleeWeapon
     {
         public ParticleSystem particles;
 

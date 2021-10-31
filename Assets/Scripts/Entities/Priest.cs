@@ -12,12 +12,14 @@ namespace Entities
 
         public void UseStaff()
         {
+            if (dead) return;
+
             action = 1;
         }
 
         public void UseEffectArea()
         {
-            if (!staff.effectAvailable) return;
+            if (dead || !staff.effectAvailable) return;
 
             action = 2;
         }

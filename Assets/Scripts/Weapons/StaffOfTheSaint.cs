@@ -5,7 +5,7 @@ using Entities;
 
 namespace Weapons
 {
-    public class StaffOfTheSaint : SplashWeapon
+    public class StaffOfTheSaint : MeleeWeapon
     {
         public uint healing;
         public float areaEffectDuration;
@@ -50,7 +50,7 @@ namespace Weapons
                 var settings = area.particles.main;
                 settings.duration = areaEffectDuration;
 
-                area.ActivateArea(owner,(uint)(damage * Aura.aura.strength / 2), (uint)(healing * Aura.aura.strength / 2));
+                area.ActivateArea(owner, (uint)(damage * Aura.aura.strength / 2), (uint)(healing * Aura.aura.strength / 2));
 
                 area.particles.Play();
                 yield return new WaitForSeconds(areaEffectDuration);

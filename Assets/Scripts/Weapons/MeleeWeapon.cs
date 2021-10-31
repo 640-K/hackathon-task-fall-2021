@@ -5,12 +5,12 @@ using Entities;
 
 namespace Weapons
 {
-    public class SplashWeapon : Weapon
+    public abstract class MeleeWeapon : Weapon
     {
         public IReadOnlyList<Entity> entitiesInRange => _entitiesInRange;
         private List<Entity> _entitiesInRange;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             _entitiesInRange = new List<Entity>();
         }
@@ -29,16 +29,6 @@ namespace Weapons
 
             if (entity != null && entity != owner)
                 _entitiesInRange.Remove(entity);
-        }
-
-        public override void Use()
-        {
-            damageDealt = 0;
-            foreach (var entity in _entitiesInRange)
-            {
-                if (entity as Vampire == null)
-                    damageDealt += entity.Hurt(damage);
-            }
         }
     }
 }

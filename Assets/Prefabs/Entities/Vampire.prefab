@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 722339928348987217}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.05, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5862369024532357035}
@@ -45,9 +45,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.025, y: 0}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.075
+  m_Radius: 0.1
 --- !u!114 &6118787607564957474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,11 +57,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 722339928348987217}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e167baaee7a4734c9f90f420e55d94f, type: 3}
+  m_Script: {fileID: 11500000, guid: 36420990e9bbce846967f1e6613d6b11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 172553375089251448}
-  damage: 80
+  damage: 45
 --- !u!1 &1962181037834278008
 GameObject:
   m_ObjectHideFlags: 0
@@ -88,7 +88,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1962181037834278008}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.05, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5862369024532357035}
@@ -107,7 +107,7 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02, y: 0.01}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.025
 --- !u!114 &1016357642532833272
@@ -369,7 +369,7 @@ MonoBehaviour:
   collisionBounds: {fileID: 741430595267312228}
   avatarAnimator: {fileID: 2953630822579901284}
   teeth: {fileID: 1016357642532833272}
-  knife: {fileID: 6118787607564957474}
+  knife: {fileID: 0}
 --- !u!114 &7006689091392600558
 MonoBehaviour:
   m_ObjectHideFlags: 0

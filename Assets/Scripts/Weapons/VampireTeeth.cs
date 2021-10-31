@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Weapons
 {
-    public class VampireTeeth : SplashWeapon
+    public class VampireTeeth : MeleeWeapon
     {
         [Range(0, 1)]
         public float healingFactor = 0.35f;

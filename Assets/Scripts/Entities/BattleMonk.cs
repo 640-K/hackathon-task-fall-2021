@@ -1,23 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Weapons;
 
 
 namespace Entities
 {
-    public class Monk : Entity
+    public class BattleMonk : Entity
     {
-        public void Worship()
+        public KnifeOfTheSaint knife;
+
+        public void Attack()
         {
             if (dead) return;
+
             action = 1;
         }
 
-        public void Sacrifice()
+        public void Speak()
         {
             if (dead) return;
-            action = 2;
-        }
 
+            action = 2; 
+        }
     }
 }

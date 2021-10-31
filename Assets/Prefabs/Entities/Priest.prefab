@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   owner: {fileID: 857242233220756167}
-  damage: 10
-  healing: 10
+  damage: 40
+  healing: 20
   areaEffectDuration: 10
   staffCooldown: 15
   areaPrefab: {fileID: 4459755496874944008, guid: 5fa7a69cf3741bd4398b66d551ad1599, type: 3}

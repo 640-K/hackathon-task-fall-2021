@@ -10,7 +10,7 @@ namespace Entities
     public class Vampire : Entity
     {
         public VampireTeeth teeth;
-        public SplashWeapon knife;
+        public MeleeWeapon knife;
 
 
         public void KnifeAttack()
