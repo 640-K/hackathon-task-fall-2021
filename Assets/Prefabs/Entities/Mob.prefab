@@ -133,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heightPoint: {fileID: 5822522866243177664}
   spriteRenderer: {fileID: 4311541622360164534}
+  tilemapRenderer: {fileID: 0}
   minLayerOrder: 10
   maxLayerOrder: 300
 --- !u!1 &7134383634526652966
@@ -218,7 +219,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e538dbf642bb2c44aabd72caec1f3b30, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
