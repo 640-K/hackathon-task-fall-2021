@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f71391ff567ba9b449ab6d96480aa2f1
+guid: 5a1c4a1793b65544e80bb7afb03bac6a
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -17,7 +17,7 @@ ScriptedImporter:
   importerVersion: 11
   pixelsPerUnit: 100
   edgesPerEllipse: 32
-  numberOfObjectsImported: 87
+  numberOfObjectsImported: 451
   useSpriteAtlas: 1
   atlasWidth: 2048
   atlasHeight: 2048
