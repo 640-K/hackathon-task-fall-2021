@@ -123,10 +123,13 @@ public class GameplayManager : MonoBehaviour
         else
             overallScore += 3;
 
-        if (entity as Priest != null) priestsCount--;
+        if (entity as Priest != null)
+        {
+            priestsCount--;
 
-        if (priestsCount == 0 ||  dead.Count == entities.Count)
-            OnWin();
+            if (priestsCount == 0 || dead.Count == entities.Count)
+                OnWin();
+        }
     }
 
 
@@ -134,7 +137,7 @@ public class GameplayManager : MonoBehaviour
     {
         if (entity as Vampire != null || gameOver) return;
 
-        if (entity as Priest != null) priestsCount--;
+        if (entity as Priest != null) priestsCount++;
 
 
         entity.believerLevel += 0.5f;
