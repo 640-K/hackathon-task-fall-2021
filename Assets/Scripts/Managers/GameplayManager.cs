@@ -40,7 +40,7 @@ public class GameplayManager : MonoBehaviour
 
 
 
-
+    public int priestsCount = 0;
     public List<Entity> entities;
     public List<Entity> dead;
 
@@ -68,6 +68,8 @@ public class GameplayManager : MonoBehaviour
 
         foreach (var entity in entities)
         {
+            if (entity as Priest != null) priestsCount++;
+
             entity.events.onDie.AddListener((uint damage) => OnDie(entity, damage));
             entity.events.onResurrect.AddListener(() => OnResurrect(entity));
         }
@@ -121,9 +123,7 @@ public class GameplayManager : MonoBehaviour
         else
             overallScore += 3;
 
-        int priestsCount = 0;
-        foreach (var ent in entities) if (ent as Priest != null) priestsCount++;
-        foreach(var d in dead) if (d as Priest != null) priestsCount--;
+        if (entity as Priest != null) priestsCount--;
 
         if (priestsCount == 0 ||  dead.Count == entities.Count)
             OnWin();
@@ -133,6 +133,9 @@ public class GameplayManager : MonoBehaviour
     public void OnResurrect(Entity entity)
     {
         if (entity as Vampire != null || gameOver) return;
+
+        if (entity as Priest != null) priestsCount--;
+
 
         entity.believerLevel += 0.5f;
         dead.Remove(entity);
