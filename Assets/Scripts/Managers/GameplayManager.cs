@@ -5,6 +5,7 @@ using Entities;
 using UnityEngine.Events;
 using System.Diagnostics;
 using UnityEngine.UI;
+using System.Timers;
 
 
 public class GameplayManager : MonoBehaviour
@@ -32,7 +33,8 @@ public class GameplayManager : MonoBehaviour
 
     public float dayDuration = 180f;
 
-    public float currentDaytime { get => Mathf.Min((float)currentDayDuration.Elapsed.TotalSeconds / dayDuration, 1f); }
+    float lastDayStartTime = 0f;
+    public float currentDaytime { get => Time.time - lastDayStartTime; }
 
     public int overallScore = 0; 
     public int currentDay = 0;
@@ -57,7 +59,6 @@ public class GameplayManager : MonoBehaviour
 
 
 
-    Stopwatch currentDayDuration = null;
     public void Start()
     {
         if (instance != null) return;
@@ -86,9 +87,8 @@ public class GameplayManager : MonoBehaviour
             {
                 AtTheBeginningOfDay(); onDayBegin.Invoke();
 
-                currentDayDuration = Stopwatch.StartNew();
+                lastDayStartTime = Time.time;
                 yield return new WaitForSeconds(dayDuration);
-                currentDayDuration.Stop();
                 AtTheEndOfDay(); onDayEnd.Invoke();
                 currentDay++;
             }
@@ -99,8 +99,8 @@ public class GameplayManager : MonoBehaviour
     {
         auraBar.fillAmount = auraStrength;
 
-        var elapsed = currentDayDuration.Elapsed;
-        time.text = $"Time: " + elapsed.Minutes + ":" + elapsed.Seconds;
+        
+        time.text = $"Time: " + (int)(currentDaytime / 60 % 60) + ":" + (int)(currentDaytime % 60);
         score.text = $"Score: {overallScore}";
     }
 
