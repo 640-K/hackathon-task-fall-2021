@@ -91,6 +91,8 @@ namespace Entities
             {
                 float animValue = 0f;
                 do {
+                    if (!dead) yield break;
+                    
                     materialRenderer.material.SetFloat("_Range", animValue);
                     animValue += 0.025f / stonifyDuration;
 
