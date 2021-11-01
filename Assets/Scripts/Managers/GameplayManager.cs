@@ -15,6 +15,9 @@ public class GameplayManager : MonoBehaviour
     public SceneTransition loseTransition;
     public SceneTransition winTransition;
     public CrossOfTheDead crossPrefab;
+    public GameObject dayPopupWindow;
+    public Text dayCountLabel;
+    public Text hpDealtToVampireCounter;
 
     public Image auraBar;
     public Text time;
@@ -46,6 +49,8 @@ public class GameplayManager : MonoBehaviour
     public UnityEvent onDayEnd;
     public UnityEvent onWin;
     public UnityEvent onLose;
+
+
 
 
 
@@ -106,6 +111,7 @@ public class GameplayManager : MonoBehaviour
 
         var obj = Instantiate(crossPrefab);
         obj.transform.position = entity.transform.position;
+        obj.fallen = entity;
 
 
         if (entity as Monk != null | entity as BattleMonk != null)
@@ -115,11 +121,12 @@ public class GameplayManager : MonoBehaviour
         else
             overallScore += 3;
 
-        if (entity as Priest != null ||  dead.Count == entities.Count)
-        {
-            OnWin();
+        int priestsCount = 0;
+        foreach (var ent in entities) if (ent as Priest != null) priestsCount++;
+        foreach(var d in dead) if (d as Priest != null) priestsCount--;
 
-        }
+        if (priestsCount == 0 ||  dead.Count == entities.Count)
+            OnWin();
     }
 
 
@@ -150,7 +157,13 @@ public class GameplayManager : MonoBehaviour
 
        auraStrength = believerLevel / entities.Count;
 
-        vampire.Hurt((uint)(auraDamage * auraStrength));
+        uint damageDealtToVampire = (uint)(auraDamage * auraStrength);
+        vampire.Hurt(damageDealtToVampire);
+
+        dayPopupWindow.SetActive(true);
+
+        dayCountLabel.text = $"Day {currentDay} completed!";
+        hpDealtToVampireCounter.text = $"{damageDealtToVampire} HP of damage was dealt to you by the local aura.";
     }
 
     public void OnWin()

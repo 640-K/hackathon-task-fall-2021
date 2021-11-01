@@ -102,6 +102,30 @@ CapsuleCollider2D:
   m_CorrespondingSourceObject: {fileID: 1496763579881266066, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
   m_PrefabInstance: {fileID: 6726150977445765361}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-4699586425447739539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9121641218820285775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fea5da0f48ad4bd4b2b553fafd9f4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlledEntity: {fileID: 4479034203645361670}
+  ground: {fileID: 0}
+  showPath: 0
+  alwaysFollow: 0
+  showGizmos: 0
+  followRadius: 0
+  alwaysFollowAfterSee: 0
+  stopBetween: 0
+  stopAttack: 0
+  target: {fileID: 0}
+  localTarget: {fileID: 0}
+  isScared: 1
 --- !u!114 &4479034203645361670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,10 +139,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+  believerLevel: 0.25
   maxSpeed: 0.95
   accelerationRate: 0.05
   deccelerationRate: 0.2
   maneuverability: 0.1
+  speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -136,6 +163,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     onHeal:
+      m_PersistentCalls:
+        m_Calls: []
+    onResurrect:
       m_PersistentCalls:
         m_Calls: []
     onVampireStartKnifeAttack:

@@ -229,6 +229,30 @@ CapsuleCollider2D:
   m_CorrespondingSourceObject: {fileID: 1496763579881266066, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
   m_PrefabInstance: {fileID: 7340324653063989022}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4710174373490970863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5048694134022267552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fea5da0f48ad4bd4b2b553fafd9f4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlledEntity: {fileID: 8616219434575281883}
+  ground: {fileID: 0}
+  showPath: 0
+  alwaysFollow: 0
+  showGizmos: 0
+  followRadius: 1
+  alwaysFollowAfterSee: 0
+  stopBetween: 1
+  stopAttack: 1
+  target: {fileID: 0}
+  localTarget: {fileID: 0}
+  isScared: 1
 --- !u!114 &8616219434575281883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,27 +311,3 @@ MonoBehaviour:
   physicsBody: {fileID: 5393209711472891858}
   collisionBounds: {fileID: 8150249693880482956}
   avatarAnimator: {fileID: 6029458215106631052}
---- !u!114 &4710174373490970863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5048694134022267552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fea5da0f48ad4bd4b2b553fafd9f4a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controlledEntity: {fileID: 8616219434575281883}
-  ground: {fileID: 0}
-  showPath: 0
-  alwaysFollow: 0
-  showGizmos: 0
-  followRadius: 1
-  alwaysFollowAfterSee: 0
-  stopBetween: 1
-  stopAttack: 1
-  target: {fileID: 0}
-  localTarget: {fileID: 0}
-  isScared: 1

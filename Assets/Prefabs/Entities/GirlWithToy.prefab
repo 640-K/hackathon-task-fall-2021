@@ -93,3 +93,110 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+--- !u!1 &1552856038975405886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2580143609405048254, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+  m_PrefabInstance: {fileID: 3909784897612937856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1820806028674681420 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 3388560463962616012, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+  m_PrefabInstance: {fileID: 3909784897612937856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6142967873543712934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7134383634526652966, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+  m_PrefabInstance: {fileID: 3909784897612937856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &13715903987435538 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3923446906190443154, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+  m_PrefabInstance: {fileID: 3909784897612937856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!70 &2488179617827348754 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1496763579881266066, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
+  m_PrefabInstance: {fileID: 3909784897612937856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &-892371138418673869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552856038975405886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1f57ca146f04b5e9071b16c4358ccb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  believerLevel: 0.25
+  maxSpeed: 1
+  accelerationRate: 0.25
+  deccelerationRate: 1
+  maneuverability: 1
+  speedFactor: 1
+  stonifyDuration: 1
+  events:
+    onStartMoving:
+      m_PersistentCalls:
+        m_Calls: []
+    onMove:
+      m_PersistentCalls:
+        m_Calls: []
+    onStopMoving:
+      m_PersistentCalls:
+        m_Calls: []
+    onDie:
+      m_PersistentCalls:
+        m_Calls: []
+    onHurt:
+      m_PersistentCalls:
+        m_Calls: []
+    onHeal:
+      m_PersistentCalls:
+        m_Calls: []
+    onResurrect:
+      m_PersistentCalls:
+        m_Calls: []
+    onVampireStartKnifeAttack:
+      m_PersistentCalls:
+        m_Calls: []
+    onVampireStartBite:
+      m_PersistentCalls:
+        m_Calls: []
+    onVampireTurnToBat:
+      m_PersistentCalls:
+        m_Calls: []
+    onVampireTurnToNormal:
+      m_PersistentCalls:
+        m_Calls: []
+  avatarCenterPivot: {fileID: 6142967873543712934}
+  physicsBody: {fileID: 1820806028674681420}
+  collisionBounds: {fileID: 2488179617827348754}
+  avatarAnimator: {fileID: 13715903987435538}
+--- !u!114 &9094488057796408032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552856038975405886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fea5da0f48ad4bd4b2b553fafd9f4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlledEntity: {fileID: -892371138418673869}
+  ground: {fileID: 0}
+  showPath: 0
+  alwaysFollow: 0
+  showGizmos: 0
+  followRadius: 0
+  alwaysFollowAfterSee: 0
+  stopBetween: 0
+  stopAttack: 0
+  target: {fileID: 0}
+  localTarget: {fileID: 0}
+  isScared: 1

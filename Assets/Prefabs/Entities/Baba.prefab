@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2580143609405048254, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
       propertyPath: m_Name
-      value: Baba1
+      value: Baba
       objectReference: {fileID: 0}
     - target: {fileID: 3923446906190443154, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
       propertyPath: m_Controller
@@ -106,6 +106,30 @@ CapsuleCollider2D:
   m_CorrespondingSourceObject: {fileID: 1496763579881266066, guid: cd37efa11ba48844cb8620eaf1dab846, type: 3}
   m_PrefabInstance: {fileID: 7654996216888899770}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &-7174026856988003441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5328462532296981764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fea5da0f48ad4bd4b2b553fafd9f4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controlledEntity: {fileID: 4858343817023897032}
+  ground: {fileID: 0}
+  showPath: 0
+  alwaysFollow: 0
+  showGizmos: 0
+  followRadius: 0
+  alwaysFollowAfterSee: 0
+  stopBetween: 0
+  stopAttack: 0
+  target: {fileID: 0}
+  localTarget: {fileID: 0}
+  isScared: 0
 --- !u!114 &4858343817023897032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,10 +143,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 65
+  believerLevel: 0.25
   maxSpeed: 0.55
   accelerationRate: 0.04
   deccelerationRate: 0.4
   maneuverability: 0.4
+  speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -140,6 +167,9 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     onHeal:
+      m_PersistentCalls:
+        m_Calls: []
+    onResurrect:
       m_PersistentCalls:
         m_Calls: []
     onVampireStartKnifeAttack:

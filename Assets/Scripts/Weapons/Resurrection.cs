@@ -39,7 +39,7 @@ namespace Weapons
                 if(Random.Range(0f, 100f) < resurrectChance)
                 {
                     cross.fallen.Resurrect();
-
+                    Destroy(cross.gameObject);
                     particles.Play();
 
                     return;
