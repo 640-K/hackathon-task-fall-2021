@@ -28,7 +28,9 @@ public class GameplayManager : MonoBehaviour
 
 
     public uint auraDamage = 50;
-    public float auraStrength { get; protected set; } = 0.35f;
+
+    float totalBelieveLevel = 0f;
+    public float auraStrength => totalBelieveLevel / entities.Count;
 
 
     public float dayDuration = 180f;
@@ -73,6 +75,8 @@ public class GameplayManager : MonoBehaviour
 
             entity.events.onDie.AddListener((uint damage) => OnDie(entity, damage));
             entity.events.onResurrect.AddListener(() => OnResurrect(entity));
+
+            totalBelieveLevel += entity.believerLevel;
         }
 
         vampire.events.onDie.AddListener((uint damage) => OnLose());
@@ -123,6 +127,8 @@ public class GameplayManager : MonoBehaviour
         else
             overallScore += 3;
 
+        totalBelieveLevel -= entity.believerLevel;
+
         if (entity as Priest != null)
         {
             priestsCount--;
@@ -130,6 +136,7 @@ public class GameplayManager : MonoBehaviour
             if (priestsCount == 0 || dead.Count == entities.Count)
                 OnWin();
         }
+
     }
 
 
@@ -141,6 +148,8 @@ public class GameplayManager : MonoBehaviour
 
 
         entity.believerLevel += 0.5f;
+        totalBelieveLevel += entity.believerLevel;
+
         dead.Remove(entity);
     }
 
@@ -160,8 +169,6 @@ public class GameplayManager : MonoBehaviour
         foreach(var entity in entities)
             if(!dead.Contains(entity))
                 believerLevel += entity.believerLevel;
-
-       auraStrength = believerLevel / entities.Count;
 
         uint damageDealtToVampire = (uint)(auraDamage * auraStrength);
         vampire.Hurt(damageDealtToVampire);
@@ -195,11 +202,11 @@ public class GameplayManager : MonoBehaviour
 
     public void ReturnToLobby()
     {
-        lobbyTransition.Transition();
-    }
+        gameOver = true;
 
-    public void BringUpTitlescreen()
-    {
+        if (Time.timeScale == 0)
+            Time.timeScale = 1;
+
         lobbyTransition.Transition();
     }
 

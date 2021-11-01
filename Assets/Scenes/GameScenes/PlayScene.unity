@@ -3859,6 +3859,7 @@ MonoBehaviour:
   overallScore: 0
   currentDay: 0
   gameOver: 0
+  priestsCount: 0
   entities: []
   dead: []
   onDayBegin:
@@ -5494,6 +5495,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 443301639}
     m_Modifications:
+    - target: {fileID: 504426840227410161, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 309848176}
+    - target: {fileID: 3123877900885736573, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 840806981}
     - target: {fileID: 8046130643125801832, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
       propertyPath: m_Name
       value: Pause
@@ -5586,16 +5595,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8046130643125824663, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
-      propertyPath: auraBarCanvas
-      value: 
-      objectReference: {fileID: 1207680291}
-    - target: {fileID: 8046130643125824663, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
-      propertyPath: healthBarCanvas
-      value: 
-      objectReference: {fileID: 725955038}
+    - target: {fileID: 8046130644547800776, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
+      propertyPath: m_Text
+      value: press "ESC" to resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046130644547800776, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046130644547800777, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
+      propertyPath: m_EffectDistance.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046130644547800777, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
+      propertyPath: m_EffectDistance.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046130644547800782, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 53.688
+      objectReference: {fileID: 0}
+    - target: {fileID: 8046130644547800782, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -15.196
+      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 8046130643125824663, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
+    - {fileID: 3123877900885736573, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d8eb995eb6977452e95f457d49125c3e, type: 3}
 --- !u!1001 &558469862
 PrefabInstance:
