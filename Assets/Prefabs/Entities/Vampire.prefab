@@ -338,6 +338,8 @@ MonoBehaviour:
   accelerationRate: 0.1
   deccelerationRate: 1
   maneuverability: 1
+  speedFactor: 1
+  stonifyDuration: 1
   events:
     onStartMoving:
       m_PersistentCalls:
@@ -368,10 +370,34 @@ MonoBehaviour:
         m_Calls: []
     onVampireTurnToBat:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 741430595267312228}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     onVampireTurnToNormal:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 741430595267312228}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
   avatarCenterPivot: {fileID: 9047144120132398032}
   physicsBody: {fileID: 3569402256807661882}
   collisionBounds: {fileID: 741430595267312228}
